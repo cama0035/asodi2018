@@ -1,10 +1,9 @@
 import sys
 
 from os.path import dirname, abspath
-d = dirname(dirname(abspath(_file_)))
-
-sys.path.append(d)
-
+d = dirname(dirname(abspath(__file__)))
+if d not in sys.path:
+    sys.path.append(d)
 
 import pandas as pd
 import streamlit as st
