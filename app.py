@@ -1,3 +1,11 @@
+import sys
+
+from os.path import dirname, abspath
+d = dirname(dirname(abspath(_file_)))
+
+sys.path.append(d)
+
+
 import pandas as pd
 import streamlit as st
 import plotly.express as px
